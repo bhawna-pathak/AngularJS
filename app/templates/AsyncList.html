@@ -1,0 +1,9 @@
+<table>
+    <tr dir-paginate="user in zipCodes | itemsPerPage: usersPerPage" total-items="totalUsers" current-page="pagination.current">
+        <td>{{ user.nm }}</td>
+        <td>{{ user.cty }}</td>
+        <td>{{ user.hse }}</td>
+        <td>{{ user.yrs }}</td>
+    </tr>
+</table>
+<dir-pagination-controls on-page-change="pageChanged(newPageNumber)"></dir-pagination-controls>

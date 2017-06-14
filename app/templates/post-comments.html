@@ -1,0 +1,25 @@
+<!-- <pre> {{comments | json}} </pre> -->
+<table ng-if="comments">
+    <caption>Comments List</caption>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Post Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Body</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr dir-paginate="comment in comments | itemsPerPage: 2">
+            <td>
+                {{ comment.id }}
+            </td>
+            <td>{{ comment.postId }}</td>
+            <td>{{ comment.name }}</td>
+            <td>{{ comment.email }}</td>
+            <td>{{ comment.body }}</td>
+        </tr>
+    </tbody>
+</table>
+<dir-pagination-controls></dir-pagination-controls>

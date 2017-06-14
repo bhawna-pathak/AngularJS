@@ -1,0 +1,21 @@
+<table ng-if="post">
+    <caption>Posts List</caption>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>User Id</th>
+            <th>Title</th>
+            <th>Body</th>
+            <th>Comments</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>{{post.id}}</td>
+            <td>{{post.userId}}</td>
+            <td>{{post.title}}</td>
+            <td>{{post.body}}</td>
+            <td><a href="#!/post/{{postId}}/comments">Comments</a></td>
+        </tr>
+    </tbody>
+</table>

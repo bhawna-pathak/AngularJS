@@ -1,0 +1,57 @@
+<div ng-init="signUpCtrl.init()">
+    <form name="signUp" class="form-signup" ng-submit="signUpCtrl.submit();" novalidate>
+        <h4 class="form-signin-heading mark">Please sign up</h4>
+        <div class="form-group" ng-class="{'has-error': (signUp.firstName.$invalid && (signUp.$submitted || signUp.firstName.$touched )), 'has-success': (signUp.firstName.$valid && (signUp.$submitted || signUp.firstName.$touched ))}">
+            <label class="control-label" for="firstName">First Name</label>
+            <input type="text" id="firstName" name="firstName" class="form-control" ng-model="signUpCtrl.user.firstName" placeholder="First Name" minlength="3" required>
+            <!-- Error handling -->
+            <div ng-show="signUp.$submitted || signUp.firstName.$touched" class="my-anim">
+                <label class="alert alert-danger" role="alert" ng-show="signUp.firstName.$error.required">Please enter your First Name.</label>
+                <label class="alert alert-danger" ng-show="signUp.firstName.$error.minlength">This should be at least 3 characters long</label>
+            </div>
+            <!-- <pre>{{signUp.firstName | json}}</pre> -->
+        </div>
+        <div class="form-group" ng-class="{'has-error': (signUp.lastName.$invalid
+ && (signUp.$submitted || signUp.lastName.$touched ))}">
+            <label class="control-label" for="lastName">Last Name</label>
+            <input type="text" id="lastName" name="lastName" class="form-control" ng-model="signUpCtrl.user.lastName" placeholder="Last Name" required>
+            <!-- Error handling -->
+            <div ng-show="signUp.$submitted || signUp.lastName.$touched" class="my-anim">
+                <label class="alert alert-danger" role="alert" ng-show="signUp.lastName.$error.required">Please enter your Last Name.</label>
+            </div>
+            <!-- <pre>{{signUp.lastName | json}}</pre> -->
+        </div>
+        <div class="form-group" ng-class="{'has-error': (signUp.email.$invalid && (signUp.$submitted || signUp.email.$touched ))}">
+            <label class="control-label" for="email">Email</label>
+            <input type="text" id="email" name="email" class="form-control" ng-model="signUpCtrl.user.email" placeholder="Email" required>
+            <!-- Error handling -->
+            <div ng-show="signUp.$submitted || signUp.email.$touched" class="my-anim">
+                <label class="alert alert-danger" role="alert" ng-show="signUp.email.$error.required">Please enter your Email.</label>
+            </div>
+            <!-- <pre>{{signUp.email | json}}</pre> -->
+        </div>
+        <div class="form-group" ng-class="{'has-error': (signUp.password.$invalid && (signUp.$submitted || signUp.password.$touched ))}">
+            <label class="control-label" for="password">Password</label>
+            <input type="password" id="password" name="password" class="form-control" ng-model="signUpCtrl.user.password" placeholder="Password" minlength="6" required>
+            <!-- Error handling -->
+            <div ng-show="signUp.$submitted || signUp.password.$touched" class="my-anim">
+                <label class="alert alert-danger" role="alert" ng-show="signUp.password.$error.required">Please enter your Password.</label>
+                <label class="alert alert-danger" ng-show="signUp.password.$error.minlength">This should be at least 6 characters long</label>
+            </div>
+            <!-- <pre>{{signUp.email | json}}</pre> -->
+        </div>
+        <div class="form-group" ng-class="{'has-error': (signUp.confirmPassword.$invalid && (signUp.$submitted || signUp.confirmPassword.$touched ))}">
+            <label class="control-label" for="confirmPassword">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" ng-model="signUpCtrl.user.confirmPassword" placeholder="Confirm Password">
+            <!-- Error handling -->
+            <div ng-show="signUp.$submitted || signUp.confirmPassword.$touched" class="my-anim">
+                <label class="alert alert-danger" role="alert" ng-show="(signUp.password.$viewValue !== signUp.confirmPassword.$viewValue)">Confirm Password does not match.</label>
+            </div>
+            <!-- <pre>{{signUp.confirmPassword | json}}</pre> -->
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
+        <pre>
+        {{signUp.$valid | json}}
+    </pre>
+    </form>
+</div>

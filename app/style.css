@@ -1,0 +1,73 @@
+.starter-template {
+    padding: 40px 15px;
+    text-align: center;
+}
+
+.form-signin {
+    max-width: 330px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.form-signup {
+    max-width: 800px;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+
+/* The starting CSS styles for the enter animation */
+
+.my-anim.ng-enter,
+.my-anim.ng-show {
+    transition: 0.5s linear all;
+    opacity: 0;
+}
+
+
+/* The finishing CSS styles for the enter animation */
+
+.my-anim.ng-enter.ng-enter-active,
+.my-anim.ng-show.ng-show-active {
+    opacity: 1;
+}
+
+.growl-container > div.growl-item {
+    margin-top: 55px;
+}
+
+table,
+th,
+td {
+    border: 1px solid grey;
+    border-collapse: collapse;
+    padding: 5px;
+}
+
+table tr:nth-child(odd) {
+    background-color: #f1f1f1;
+}
+
+table tr:nth-child(even) {
+    background-color: #ffffff;
+}
+
+th[ng-click] {
+    cursor: pointer;
+    position: relative;
+    color: blue;
+}
+
+.fa-sort-up:before,
+.fa-sort-asc:before {
+    position: absolute;
+/*    top: 8px;
+    left: 70px;*/
+}
+
+.fa-sort-down:before,
+.fa-sort-desc:before {
+    position: absolute;
+/*    top: 10px;
+    left: 70px;*/
+}

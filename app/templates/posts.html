@@ -1,0 +1,22 @@
+<table ng-if="posts">
+    <caption>Posts List</caption>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>User Id</th>
+            <th>Title</th>
+            <th>Body</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr dir-paginate="post in posts | itemsPerPage: 10">
+            <td>
+                <a href="#!/post/{{post.id}}">{{ post.id }}</a>
+            </td>
+            <td>{{ post.userId }}</td>
+            <td>{{ post.title }}</td>
+            <td>{{ post.body }}</td>
+        </tr>
+    </tbody>
+</table>
+<dir-pagination-controls></dir-pagination-controls>

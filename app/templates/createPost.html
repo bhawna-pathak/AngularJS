@@ -1,0 +1,17 @@
+<form name="postUser" ng-submit="createPost();" novalidate>
+    <div class="form-group">
+        <label class="control-label" for="userId">UserId</label>
+        <input type="text" id="userId" name="userId" class="form-control" ng-model="post.userId" placeholder="userId" required>
+    </div>
+    <div class="form-group">
+        <label class="control-label" for="title">Title</label>
+        <input type="text" id="title" name="title" class="form-control" ng-model="post.title" placeholder="title" required>
+    </div>
+    <div class="form-group">
+        <label class="control-label" for="body">Body</label>
+        <input type="text" id="body" name="body" class="form-control" ng-model="post.body" placeholder="body" required>
+    </div>
+    <div class="form-group">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Create</button>
+    </div>
+</form>
